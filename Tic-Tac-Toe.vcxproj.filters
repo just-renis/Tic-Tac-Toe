@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\MainThings">
+      <UniqueIdentifier>{454c3b0f-775b-44fb-b735-221a145366d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Games">
+      <UniqueIdentifier>{0ec5c9d8-29ba-473e-97cd-e7540c7ab597}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Games\MineSweeper">
+      <UniqueIdentifier>{6423c488-46c9-4ab4-990a-5ddbf67edb03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Games\Tic-Tac-Toe">
+      <UniqueIdentifier>{87a366f6-c7dd-4e57-8d12-141363236214}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Programs">
+      <UniqueIdentifier>{83689e39-9f2b-404b-8ddd-1625dbf97a0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Games\Snake">
+      <UniqueIdentifier>{0dda9c4d-9c3f-4921-a9d2-37f2d36bf25f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MainThings\Leaderboard">
+      <UniqueIdentifier>{268055c5-3185-4ebb-aa45-9faa6132be58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Programs\PathFinder">
+      <UniqueIdentifier>{296e84b5-ff1f-484f-aad9-5257391d70e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MainThings\StartingMenu">
+      <UniqueIdentifier>{34a0b12e-6db6-457f-9e09-8d13ae6f4e63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Games\Multiplayer">
+      <UniqueIdentifier>{4ed65d44-1427-461e-a7cb-7e2dffbc790b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Games\Find the treasure">
+      <UniqueIdentifier>{9fd94dff-0d1a-4cc1-8bc9-3e704c4ecf4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Games\Find the treasure\Traps">
+      <UniqueIdentifier>{3013beb7-bcd2-4610-a8ee-09392c1d2eb6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Programs\FluidSimulation">
+      <UniqueIdentifier>{271dfcbb-27f4-4c23-9dfa-263be98650ee}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="SpriteHolder.cpp">
+      <Filter>Source Files\Games\Tic-Tac-Toe</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files\MainThings</Filter>
+    </ClCompile>
+    <ClCompile Include="VoidFunctions.cpp">
+      <Filter>Source Files\MainThings</Filter>
+    </ClCompile>
+    <ClCompile Include="Leaderboard.cpp">
+      <Filter>Source Files\MainThings\Leaderboard</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files\Games\Multiplayer</Filter>
+    </ClCompile>
+    <ClCompile Include="Power.cpp">
+      <Filter>Source Files\Games\Multiplayer</Filter>
+    </ClCompile>
+    <ClCompile Include="G1_Player.cpp">
+      <Filter>Source Files\Games\Find the treasure</Filter>
+    </ClCompile>
+    <ClCompile Include="Obstacle.cpp">
+      <Filter>Source Files\Games\Find the treasure</Filter>
+    </ClCompile>
+    <ClCompile Include="Level.cpp">
+      <Filter>Source Files\Games\Find the treasure</Filter>
+    </ClCompile>
+    <ClCompile Include="PerfectCollision.cpp">
+      <Filter>Source Files\MainThings</Filter>
+    </ClCompile>
+    <ClCompile Include="Collectible.cpp">
+      <Filter>Source Files\Games\Find the treasure</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundPlayer.cpp">
+      <Filter>Source Files\Games\Find the treasure</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_ftt.cpp">
+      <Filter>Source Files\Games\Find the treasure</Filter>
+    </ClCompile>
+    <ClCompile Include="Trap.cpp">
+      <Filter>Source Files\Games\Find the treasure\Traps</Filter>
+    </ClCompile>
+    <ClCompile Include="Trap_Movable.cpp">
+      <Filter>Source Files\Games\Find the treasure\Traps</Filter>
+    </ClCompile>
+    <ClCompile Include="BoulderTrap.cpp">
+      <Filter>Source Files\Games\Find the treasure\Traps</Filter>
+    </ClCompile>
+    <ClCompile Include="SpearTrap.cpp">
+      <Filter>Source Files\Games\Find the treasure\Traps</Filter>
+    </ClCompile>
+    <ClCompile Include="SpikeTrap.cpp">
+      <Filter>Source Files\Games\Find the treasure\Traps</Filter>
+    </ClCompile>
+    <ClCompile Include="Trap_nStop.cpp">
+      <Filter>Source Files\Games\Find the treasure\Traps</Filter>
+    </ClCompile>
+    <ClCompile Include="Spawner.cpp">
+      <Filter>Source Files\Games\Find the treasure\Traps</Filter>
+    </ClCompile>
+    <ClCompile Include="P1_Tile.cpp">
+      <Filter>Source Files\Programs\PathFinder</Filter>
+    </ClCompile>
+    <ClCompile Include="G1_Tile.cpp">
+      <Filter>Source Files\Games\Tic-Tac-Toe</Filter>
+    </ClCompile>
+    <ClCompile Include="G2_Tile.cpp">
+      <Filter>Source Files\Games\MineSweeper</Filter>
+    </ClCompile>
+    <ClCompile Include="Fluid.cpp">
+      <Filter>Source Files\Programs\FluidSimulation</Filter>
+    </ClCompile>
+    <ClCompile Include="MouseClick.cpp">
+      <Filter>Source Files\Programs\FluidSimulation</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SpriteHolder.h">
+      <Filter>Source Files\Games\Tic-Tac-Toe</Filter>
+    </ClInclude>
+    <ClInclude Include="Main1.h">
+      <Filter>Source Files\Games\Tic-Tac-Toe</Filter>
+    </ClInclude>
+    <ClInclude Include="Starting.h">
+      <Filter>Source Files\MainThings\StartingMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="Main2.h">
+      <Filter>Source Files\Games\MineSweeper</Filter>
+    </ClInclude>
+    <ClInclude Include="Program.h">
+      <Filter>Source Files\MainThings</Filter>
+    </ClInclude>
+    <ClInclude Include="VoidFunctions.h">
+      <Filter>Source Files\MainThings</Filter>
+    </ClInclude>
+    <ClInclude Include="LeaderBoard.h">
+      <Filter>Source Files\MainThings\Leaderboard</Filter>
+    </ClInclude>
+    <ClInclude Include="Chronometer.h">
+      <Filter>Source Files\MainThings</Filter>
+    </ClInclude>
+    <ClInclude Include="MainP1.h">
+      <Filter>Source Files\Programs\PathFinder</Filter>
+    </ClInclude>
+    <ClInclude Include="Main3.h">
+      <Filter>Source Files\Games\Snake</Filter>
+    </ClInclude>
+    <ClInclude Include="MultiplayerGame.h">
+      <Filter>Source Files\Games\Multiplayer</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Source Files\Games\Multiplayer</Filter>
+    </ClInclude>
+    <ClInclude Include="Power.h">
+      <Filter>Source Files\Games\Multiplayer</Filter>
+    </ClInclude>
+    <ClInclude Include="Main4.h">
+      <Filter>Source Files\Games\Find the treasure</Filter>
+    </ClInclude>
+    <ClInclude Include="G1_Player.h">
+      <Filter>Source Files\Games\Find the treasure</Filter>
+    </ClInclude>
+    <ClInclude Include="Obstacle.h">
+      <Filter>Source Files\Games\Find the treasure</Filter>
+    </ClInclude>
+    <ClInclude Include="Level.h">
+      <Filter>Source Files\Games\Find the treasure</Filter>
+    </ClInclude>
+    <ClInclude Include="PerfectCollision.h">
+      <Filter>Source Files\MainThings</Filter>
+    </ClInclude>
+    <ClInclude Include="Collectible.h">
+      <Filter>Source Files\Games\Find the treasure</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundPlayer.h">
+      <Filter>Source Files\Games\Find the treasure</Filter>
+    </ClInclude>
+    <ClInclude Include="UI_ftt.h">
+      <Filter>Source Files\Games\Find the treasure</Filter>
+    </ClInclude>
+    <ClInclude Include="Trap.h">
+      <Filter>Source Files\Games\Find the treasure\Traps</Filter>
+    </ClInclude>
+    <ClInclude Include="Trap_Movable.h">
+      <Filter>Source Files\Games\Find the treasure\Traps</Filter>
+    </ClInclude>
+    <ClInclude Include="BoulderTrap.h">
+      <Filter>Source Files\Games\Find the treasure\Traps</Filter>
+    </ClInclude>
+    <ClInclude Include="SpearTrap.h">
+      <Filter>Source Files\Games\Find the treasure\Traps</Filter>
+    </ClInclude>
+    <ClInclude Include="SpikeTrap.h">
+      <Filter>Source Files\Games\Find the treasure\Traps</Filter>
+    </ClInclude>
+    <ClInclude Include="Trap_nStop.h">
+      <Filter>Source Files\Games\Find the treasure\Traps</Filter>
+    </ClInclude>
+    <ClInclude Include="Spawner.h">
+      <Filter>Source Files\Games\Find the treasure\Traps</Filter>
+    </ClInclude>
+    <ClInclude Include="P1_Tile.h">
+      <Filter>Source Files\Programs\PathFinder</Filter>
+    </ClInclude>
+    <ClInclude Include="UI.h">
+      <Filter>Source Files\MainThings</Filter>
+    </ClInclude>
+    <ClInclude Include="G1_Tile.h">
+      <Filter>Source Files\Games\Tic-Tac-Toe</Filter>
+    </ClInclude>
+    <ClInclude Include="G2_Tile.h">
+      <Filter>Source Files\Games\MineSweeper</Filter>
+    </ClInclude>
+    <ClInclude Include="MainP2.h">
+      <Filter>Source Files\Programs\FluidSimulation</Filter>
+    </ClInclude>
+    <ClInclude Include="Fluid.h">
+      <Filter>Source Files\Programs\FluidSimulation</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseClick.h">
+      <Filter>Source Files\Programs\FluidSimulation</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="MineSweeperLeaderboard.txt">
+      <Filter>Source Files\Games\MineSweeper</Filter>
+    </Text>
+    <Text Include="SnakeLeaderboard.txt">
+      <Filter>Source Files\Games\Snake</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
