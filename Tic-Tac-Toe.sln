@@ -6,9 +6,6 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tic-Tac-Toe", "Tic-Tac-Toe.vcxproj", "{A842E95D-C7E7-47D0-9204-4F427FA9AE81}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{87E7C681-57FE-48C5-9B92-7C796BF2F18D}"
-	ProjectSection(SolutionItems) = preProject
-		LETS GOOO!.txt = LETS GOOO!.txt
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
