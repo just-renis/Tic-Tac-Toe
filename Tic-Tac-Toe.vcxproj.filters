@@ -121,6 +121,9 @@
     <ClCompile Include="MouseClick.cpp">
       <Filter>Source Files\Programs\FluidSimulation</Filter>
     </ClCompile>
+    <ClCompile Include="Chunk.cpp">
+      <Filter>Source Files\Programs\FluidSimulation</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SpriteHolder.h">
@@ -226,6 +229,9 @@
       <Filter>Source Files\Programs\FluidSimulation</Filter>
     </ClInclude>
     <ClInclude Include="MouseClick.h">
+      <Filter>Source Files\Programs\FluidSimulation</Filter>
+    </ClInclude>
+    <ClInclude Include="Chunk.h">
       <Filter>Source Files\Programs\FluidSimulation</Filter>
     </ClInclude>
   </ItemGroup>
