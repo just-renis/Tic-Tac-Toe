@@ -124,6 +124,9 @@
     <ClCompile Include="Chunk.cpp">
       <Filter>Source Files\Programs\FluidSimulation</Filter>
     </ClCompile>
+    <ClCompile Include="UI_P2.cpp">
+      <Filter>Source Files\Programs\FluidSimulation</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SpriteHolder.h">
@@ -232,6 +235,9 @@
       <Filter>Source Files\Programs\FluidSimulation</Filter>
     </ClInclude>
     <ClInclude Include="Chunk.h">
+      <Filter>Source Files\Programs\FluidSimulation</Filter>
+    </ClInclude>
+    <ClInclude Include="UI_P2.h">
       <Filter>Source Files\Programs\FluidSimulation</Filter>
     </ClInclude>
   </ItemGroup>
