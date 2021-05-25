@@ -8,13 +8,13 @@ Fluid::Fluid(Vector2f pos, const string& type)
 	this->body.setFillColor(Color::Black); // Setting fluid to nothingness color.
 }
 
-void Fluid::drawFluids(RenderWindow& window, const vector<vector<Fluid*>>& fluids)
+void Fluid::drawFluids(RenderTexture& texture, const vector<vector<Fluid*>>& fluids)
 {
 	for (int i{ 0 }; i < fluids.size(); i++) // Draw all fluids which contain real fluid.
 	{
 		for (int j{ 0 }; j < fluids[i].size(); j++)
 		{
-			if (fluids[i][j]->hasFluid) window.draw(fluids[i][j]->body);
+			if (fluids[i][j]->hasFluid) texture.draw(fluids[i][j]->body);
 		}
 	}
 }

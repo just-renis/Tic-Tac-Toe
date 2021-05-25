@@ -24,9 +24,13 @@ Chunk::~Chunk()
 	}
 }
 
-void Chunk::drawChunk(RenderWindow& window)
+void Chunk::drawChunk(RenderTexture& texture)
 {
-	if (this->hasFluids) Fluid::drawFluids(window, this->fluids); // If this chunk has any fluids, draw those fluids.
+	if (this->hasFluids)
+	{
+		Fluid::drawFluids(texture, this->fluids); // If this chunk has any fluids, draw those fluids.
+		this->hasFluids = false;
+	}
 }
 
 // ---------------------------------------------------------------------- PRIVATE FUNCTIONS -----------------------------------------------------------------

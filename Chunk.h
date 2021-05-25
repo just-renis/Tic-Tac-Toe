@@ -5,7 +5,7 @@ class Chunk
 public:
 	Chunk(Vector2f pos);
 	~Chunk();
-	void drawChunk(RenderWindow& window);
+	void drawChunk(RenderTexture& texture);
 	void changeChunkColor()
 	{
 		Color color{ static_cast<Uint8>(rand() % 256), static_cast<Uint8>(rand() % 256), static_cast<Uint8>(rand() % 256) };
@@ -14,6 +14,7 @@ public:
 			for (int j{ 0 }; j < this->fluids[i].size(); j++)
 			{
 				this->fluids[i][j]->setColor(color);
+				this->hasFluids = true;
 			}
 		}
 	}

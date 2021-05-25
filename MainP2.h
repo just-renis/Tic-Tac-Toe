@@ -15,6 +15,9 @@ void MainP2Loop(RenderWindow& window, Event& e, int& mainState, int& depthState,
 	UI_P2 UI; // UI container.
 	initUI(UI); // Initialize UI.
 	initChunks(window, chunks, font); // Initialize chunks.
+	RenderTexture whatToDraw;
+	Sprite drawingSprite;
+	whatToDraw.create(WINDOW_WIDTH, WINDOW_HEIGHT);
 	while (window.isOpen() && mainLoop)
 	{
 		mousePos = Mouse::getPosition(window);
@@ -33,7 +36,10 @@ void MainP2Loop(RenderWindow& window, Event& e, int& mainState, int& depthState,
 		}
 
 		// ----------------------------------------------------------- MOUSE CLICK EVENTS -------------------------------------------------------------------
-		if (Mouse::isButtonPressed(Mouse::Left)) mouse.click(mousePos, '2', chunks); // Creates fluids with mouse clicks.
+		if (Mouse::isButtonPressed(Mouse::Left))
+		{
+			mouse.click(mousePos, '2', chunks); // Creates fluids with mouse clicks.
+		}
 		else if (Mouse::isButtonPressed(Mouse::Right)) // Randomizes color of every chunk fluids.
 		{
 			for (int i{ 0 }; i < chunks.size(); i++)
@@ -41,16 +47,19 @@ void MainP2Loop(RenderWindow& window, Event& e, int& mainState, int& depthState,
 				for (int j{ 0 }; j < chunks[i].size(); j++) chunks[i][j]->changeChunkColor();
 			}
 		}
-
 		// ---------------------------------------------------------------- DRAW --------------------------------------------------------------------------------
-		window.clear(Color::Black);
+
 		for (int i{ 0 }; i < chunks.size(); i++) // Drawing all chunks.
 		{
 			for (int j{ 0 }; j < chunks[i].size(); j++)
 			{
-				chunks[i][j]->drawChunk(window);
+				chunks[i][j]->drawChunk(whatToDraw);
 			}
 		}
+		whatToDraw.display();
+		window.clear(Color::Black);
+		drawingSprite.setTexture(whatToDraw.getTexture());
+		window.draw(drawingSprite);
 		window.display();
 	}
 	for (int i{ 0 }; i < chunks.size(); i++) // Deleting all chunks.
