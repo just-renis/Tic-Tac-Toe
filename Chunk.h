@@ -3,18 +3,33 @@
 class Chunk
 {
 public:
-	Chunk(Vector2f pos);
+	Chunk(Vector2f pos, Vector2i whichChunk);
 	~Chunk();
 	void drawChunk(RenderTexture& texture);
-	void changeChunkColor()
+	void logic();
+	void changeChunkColor(bool pixelColor)
 	{
-		Color color{ static_cast<Uint8>(rand() % 256), static_cast<Uint8>(rand() % 256), static_cast<Uint8>(rand() % 256) };
-		for (int i{ 0 }; i < this->fluids.size(); i++)
+		if (pixelColor)
 		{
-			for (int j{ 0 }; j < this->fluids[i].size(); j++)
+			Color color{ static_cast<Uint8>(rand() % 256), static_cast<Uint8>(rand() % 256), static_cast<Uint8>(rand() % 256) };
+			for (int i{ 0 }; i < this->fluids.size(); i++)
 			{
-				this->fluids[i][j]->setColor(color);
-				this->hasFluids = true;
+				for (int j{ 0 }; j < this->fluids[i].size(); j++)
+				{
+					this->fluids[i][j]->setColor(color);
+					this->needToBeDrawed = true;
+				}
+			}
+		}
+		else
+		{
+			for (int i{ 0 }; i < this->fluids.size(); i++)
+			{
+				for (int j{ 0 }; j < this->fluids[i].size(); j++)
+				{
+					this->fluids[i][j]->setColor(Color{ static_cast<Uint8>(rand() % 256), static_cast<Uint8>(rand() % 256), static_cast<Uint8>(rand() % 256) });
+					this->needToBeDrawed = true;
+				}
 			}
 		}
 	}
@@ -24,7 +39,8 @@ public:
 private:
 	Vector2f pos; // Chunk position.
 	vector<vector<Fluid*>> fluids; // Fluids container.
-	bool hasFluids; // Is this chunk has any fluids?
+	bool needToBeDrawed; // Is this chunk need to be drawed?
+	bool hasAnyMovingFluids; // Is this chunk has any moving fluids?
 	bool canCreateFluid(Vector2i pixelPos); // Checks boundaries if can create a fluid in this chunk.
 	void createFluid(const string& type, Vector2i pos); // Creating fluid function.
 };

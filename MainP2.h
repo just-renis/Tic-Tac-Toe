@@ -4,7 +4,6 @@
 #include "UI_P2.h"
 
 void initChunks(RenderWindow& window, vector<vector<Chunk*>>& chunks, Font* font); // Initializing chunks function.
-void initUI(UI_P2& UI); // Initializing all UI function.
 
 void MainP2Loop(RenderWindow& window, Event& e, int& mainState, int& depthState, Font* font)
 {
@@ -13,11 +12,10 @@ void MainP2Loop(RenderWindow& window, Event& e, int& mainState, int& depthState,
 	MouseClick mouse("water");
 	vector<vector<Chunk*>> chunks; // Chunks container.
 	UI_P2 UI; // UI container.
-	initUI(UI); // Initialize UI.
 	initChunks(window, chunks, font); // Initialize chunks.
 	RenderTexture whatToDraw;
 	Sprite drawingSprite;
-	whatToDraw.create(WINDOW_WIDTH, WINDOW_HEIGHT);
+	whatToDraw.create(static_cast<unsigned int>(WINDOW_WIDTH), static_cast<unsigned int>(WINDOW_HEIGHT));
 	while (window.isOpen() && mainLoop)
 	{
 		mousePos = Mouse::getPosition(window);
@@ -44,11 +42,26 @@ void MainP2Loop(RenderWindow& window, Event& e, int& mainState, int& depthState,
 		{
 			for (int i{ 0 }; i < chunks.size(); i++)
 			{
-				for (int j{ 0 }; j < chunks[i].size(); j++) chunks[i][j]->changeChunkColor();
+				for (int j{ 0 }; j < chunks[i].size(); j++) chunks[i][j]->changeChunkColor(true);
+			}
+		}
+		else if (Keyboard::isKeyPressed(Keyboard::R)) // Randomizes color of every pixel.
+		{
+			for (int i{ 0 }; i < chunks.size(); i++)
+			{
+				for (int j{ 0 }; j < chunks[i].size(); j++) chunks[i][j]->changeChunkColor(false);
+			}
+		}
+
+		// ----------------------------------------------------------- LOGIC -------------------------------------------------------------------------
+		for (int i{ static_cast<int>(chunks.size()) - 1 }; i >= 0; i--)
+		{
+			for (int j{ static_cast<int>(chunks[i].size()) - 1 }; j >= 0; j--)
+			{
+				chunks[i][j]->logic();
 			}
 		}
 		// ---------------------------------------------------------------- DRAW --------------------------------------------------------------------------------
-
 		for (int i{ 0 }; i < chunks.size(); i++) // Drawing all chunks.
 		{
 			for (int j{ 0 }; j < chunks[i].size(); j++)
@@ -86,10 +99,10 @@ void initChunks(RenderWindow& window, vector<vector<Chunk*>>& chunks, Font* font
 			chunks.push_back(vector<Chunk*>{}); // Creating chunk row.
 			for (int j{ 0 }; j < 54; j++)
 			{
-				chunks[i].push_back(new Chunk{ Vector2f{i * 20.f, j * 20.f} }); // Creating all chunks in a row.
+				chunks[i].push_back(new Chunk{ Vector2f{i * 20.f, j * 20.f}, Vector2i{i, j} }); // Creating all chunks in a row.
 				quantity++;
 			}
-			percentage = quantity / 51.84f; // Calculating percentage.
+			percentage = static_cast<int>(quantity / 51.84f); // Calculating percentage.
 			percentageText.setString(to_string(percentage) + " %"); // Setting string of percentage.
 			loadingText.setString("Chunks loaded: " + to_string(quantity)); // Setting string of how many chunks has been loaded.
 			loadingBar.setSize(Vector2f(percentage * (WINDOW_WIDTH / 384.f), FOh(50.f))); // Setting size of loaded percentage bar.
@@ -101,9 +114,4 @@ void initChunks(RenderWindow& window, vector<vector<Chunk*>>& chunks, Font* font
 			window.display();
 		}
 	}
-}
-
-void initUI(UI_P2& UI)
-{
-
 }

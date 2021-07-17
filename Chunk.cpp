@@ -1,7 +1,7 @@
 #include "Chunk.h"
 
-Chunk::Chunk(Vector2f pos)
-	: hasFluids{false}, pos{pos}
+Chunk::Chunk(Vector2f pos, Vector2i whichChunk)
+	: needToBeDrawed{false}, pos{pos}, hasAnyMovingFluids{false}
 {
 	for (int i{ 0 }; i < 20; i++)
 	{
@@ -26,10 +26,19 @@ Chunk::~Chunk()
 
 void Chunk::drawChunk(RenderTexture& texture)
 {
-	if (this->hasFluids)
+	if (this->needToBeDrawed)
 	{
 		Fluid::drawFluids(texture, this->fluids); // If this chunk has any fluids, draw those fluids.
-		this->hasFluids = false;
+		this->needToBeDrawed = false;
+	}
+}
+
+void Chunk::logic()
+{
+	if (this->hasAnyMovingFluids)
+	{
+		if (Fluid::fluidsLogic(this->fluids)) this->needToBeDrawed = true;
+		else this->hasAnyMovingFluids = false;
 	}
 }
 
@@ -51,5 +60,6 @@ void Chunk::createFluid(const string& type, Vector2i pos)
 {
 	this->fluids[pos.x][pos.y]->setColor(Color::Blue); // Set water color for fluid.
 	this->fluids[pos.x][pos.y]->setType("water"); // Set type of fluid to water.
-	this->hasFluids = true; // This chunk now has fluids.
+	this->needToBeDrawed = true; // This chunk now has fluids.
+	this->hasAnyMovingFluids = true; // This chunk now has moving fluids.
 }

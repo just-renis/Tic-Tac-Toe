@@ -3,7 +3,7 @@
 MouseClick::MouseClick(const string& type)
 	: type{type}
 {
-	circle2 = // Circle pattern.
+	this->circle2 = // Circle pattern.
 	{
 		0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0,
 		0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0,
@@ -66,7 +66,7 @@ void MouseClick::loopThroughChunks(vector<vector<Chunk*>>& chunks, Vector2i pixe
 			if (chunks[i][j]->canCreateFluid(pixelPos)) // If in this chunk, fluid can be created then proceed.
 			{
 				chunks[i][j]->createFluid("water", Vector2i{ pixelPos.x % 20, pixelPos.y % 20 }); // Creating "water" fluid in this pixel position.
-				return;
+				return; // Breaking out of loops and function.
 			}
 		}
 	}
