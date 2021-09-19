@@ -16,10 +16,11 @@ void StartingLoop(RenderWindow &window, Event &e, int &mainState, int &depthStat
 
 	// ---------------------------------------------------------------- SETTING UP SPRITES --------------------------------------------------------------
 	vector<Sprite> gameSprites, programSprites;
-	for (int i = 0; i < 2; i++) programSprites.push_back(Sprite());
+	for (int i = 0; i < 3; i++) programSprites.push_back(Sprite());
 	for (int i = 0; i < programSprites.size(); i++) programSprites[i].setTexture(texs["program1"]);
 	programSprites[0].setPosition(V2f(0.f, 40.f));
 	programSprites[1].setPosition(V2f(155.f, 40.f));
+	programSprites[2].setPosition(V2f(310.f, 40.f));
 	for (int i = 0; i < programSprites.size(); i++) programSprites[i].setScale(V2f(1.f, 1.f));
 	for (int i = 0; i < 4; i++) gameSprites.push_back(Sprite());
 	gameSprites[0].setTexture(texs["game1"]);

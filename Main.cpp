@@ -5,6 +5,7 @@
 #include "Main4.h"
 #include "MainP1.h"
 #include "MainP2.h"
+#include "MainP3.h"
 
 void drawLoading(float percentage, RenderWindow& window, Text& loadingPercentage, const RectangleShape& loadingBarFrame, RectangleShape& loadingBar);
 
@@ -109,7 +110,8 @@ int main()
 			case 3: Main3Loop(window, e, mainState, depthState, font, Texs); break;
 			case 4: Main4Loop(window, e, mainState, depthState, font, Texs, Buffers); break;
 			case 5: MainP1Loop(window, e, mainState, depthState, Texs, Buffers, font); break;
-			case 6: MainP2Loop(window, e, mainState, depthState, font);
+			case 6: MainP2Loop(window, e, mainState, depthState, font); break;
+			case 7: MainP3Loop(window, e, mainState, depthState, font);
 		}
 	}
 	return 0;

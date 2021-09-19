@@ -44,6 +44,9 @@
     <Filter Include="Source Files\Programs\FluidSimulation">
       <UniqueIdentifier>{271dfcbb-27f4-4c23-9dfa-263be98650ee}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Programs\DL FlappyBird">
+      <UniqueIdentifier>{98a844b7-df08-4c1b-973b-f14f802f6ae7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SpriteHolder.cpp">
@@ -126,6 +129,12 @@
     </ClCompile>
     <ClCompile Include="UI_P2.cpp">
       <Filter>Source Files\Programs\FluidSimulation</Filter>
+    </ClCompile>
+    <ClCompile Include="P3_Bird.cpp">
+      <Filter>Source Files\Programs\DL FlappyBird</Filter>
+    </ClCompile>
+    <ClCompile Include="P3_Pipe.cpp">
+      <Filter>Source Files\Programs\DL FlappyBird</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -239,6 +248,15 @@
     </ClInclude>
     <ClInclude Include="UI_P2.h">
       <Filter>Source Files\Programs\FluidSimulation</Filter>
+    </ClInclude>
+    <ClInclude Include="MainP3.h">
+      <Filter>Source Files\Programs\DL FlappyBird</Filter>
+    </ClInclude>
+    <ClInclude Include="P3_Bird.h">
+      <Filter>Source Files\Programs\DL FlappyBird</Filter>
+    </ClInclude>
+    <ClInclude Include="P3_Pipe.h">
+      <Filter>Source Files\Programs\DL FlappyBird</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

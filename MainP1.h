@@ -42,7 +42,6 @@ void MainP1Loop(RenderWindow& window, Event& e, int& mainState, int& depthState,
 	bool pause = false;
 	bool lostFocusOnWindow = false;
 	bool drawUI31 = false;
-
 	// ---------------------------------------------- TILES ----------------------------------------------
 	vector<vector<P1_Tile>> map;
 	vector<Vector2i> toColor;
